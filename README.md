@@ -1,1 +1,1 @@
-git@github.com:anyatupikova/ono-tebe-nado.git
+git@github.com:anyatupikova/posmotri_v_okno.git

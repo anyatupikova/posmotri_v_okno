@@ -207,7 +207,7 @@ input::placeholder {
 }
 
 .content__card-link:active,
-.content__card-link_current:active,
+.content__card-link_current,
 .search-form__textfield:active,
 .button:active {
   background-color: rgba(84, 80, 80, 1);

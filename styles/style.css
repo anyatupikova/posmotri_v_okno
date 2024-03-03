@@ -55,7 +55,8 @@ ol {
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
-  max-block-size: 534px;
+  block-size: 534px;
+  inline-size: 1140px;
 }
 
 .result__video-container {
@@ -84,7 +85,7 @@ ol {
 .search-form__fieldset {
   border: none;
   display: grid;
-  gap: 4px;
+  gap: 5px;
   inline-size: 212px;
 }
 
@@ -112,7 +113,7 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__label:hover,
+.search-form__label:hover .search-form__label-text,
 .button:hover,
 .content__card-link:hover {
   text-decoration: underline;
@@ -186,7 +187,7 @@ input::placeholder {
   border: 1px solid #fff;
   font-size: inherit;
   font-family: inherit;
-  font-weight: 700px;
+  font-weight: 700;
   color: #fff;
   padding-block-start: 6px;
   padding-block-end: 6px;
@@ -206,6 +207,7 @@ input::placeholder {
 }
 
 .content__card-link:active,
+.content__card-link_current:active,
 .search-form__textfield:active,
 .button:active {
   background-color: rgba(84, 80, 80, 1);
@@ -214,7 +216,7 @@ input::placeholder {
 .content__details {
   display: grid;
   gap: 23px;
-  inline-size: 416px;
+  max-inline-size: 399px;
   block-size: 100%;
   font-family: 'Oswald', 'Arial', 'Helvetica', sans-serif;
 }
@@ -233,6 +235,7 @@ input::placeholder {
   overflow: auto;
   position: relative;
   max-block-size: 298px;
+  max-inline-size: 100%
 }
 
 .content__list-item:not(:last-child) {
@@ -254,16 +257,25 @@ input::placeholder {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  flex-basis: 0;
+  overflow: hidden;
 }
 
 .content__video-card-title {
   text-transform: uppercase;
   font-size: 30px;
   line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-block-end: 6px;
 }
 
 .content__video-card-description {
   line-height: 0.9;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
